@@ -173,6 +173,17 @@ page 82561 "ADLSE Setup Tables"
                 end;
 
             }
+            action(Dev)
+            {
+                ApplicationArea = All;
+                Caption = 'Dev';
+
+                trigger OnAction()
+                begin
+                    Codeunit.Run(Codeunit::"ADLSE Execute", Rec);
+                end;
+
+            }
         }
     }
 
